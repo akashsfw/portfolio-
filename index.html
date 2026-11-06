@@ -1,454 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AKASH SINGH // CYBER_OPTIC PORTFOLIO</title>
-  <!-- Google Fonts -->
+  <title>Akash Singh | Portfolio</title>
+  <meta name="description" content="Portfolio of Akash Singh — 1st-Year Mechanical Engineering Undergrad at NSUT Dwarka, New Delhi." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
-  <!-- Main Stylesheet -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Animated Cyberpunk City & Rain Canvas -->
-  <canvas id="city-canvas"></canvas>
-
-  <!-- CRT Scanline Overlay -->
-  <div id="crt-overlay" class="crt-lines"></div>
-
-  <!-- Top Tactical Navigation HUD -->
-  <header class="top-nav">
-    <div class="nav-inner">
-      <a href="#scanner" class="brand">
-        <div class="brand-box">AS</div>
-        <div>
-          <div class="brand-title">AKASH_SINGH <span class="tag-cyan">OPTIC_OS</span></div>
-          <div class="brand-sub">NSUT DWARKA // NEW DELHI</div>
-        </div>
-      </a>
-
-      <nav class="nav-links">
-        <a href="#scanner">01 // BIOMETRIC_SCAN</a>
-        <a href="#telemetry">02 // TELEMETRY</a>
-        <a href="#projects">03 // PROJECT_DECK</a>
-        <a href="#comms">04 // UPLINK</a>
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">AS<span>.</span></a>
+      <nav class="nav-menu">
+        <a href="#about">About</a>
+        <a href="#affiliations">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#interests">Interests</a>
+        <a href="#contact">Contact</a>
       </nav>
-
-      <div class="hud-controls">
-        <button class="hud-btn active" id="theme-btn" title="Switch HUD Color Palette">PALETTE: CYAN</button>
-        <button class="hud-btn active" id="crt-btn" title="Toggle Scanline Overlay">CRT: ON</button>
-      </div>
+      <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme" title="Toggle theme">🌙</button>
     </div>
   </header>
 
-  <main class="container">
+  <main class="main-content">
 
-    <!-- ==========================================
-         01 // CYBORG OPTICAL BIOMETRIC SCANNER
-         ========================================== -->
-    <section id="scanner">
-      <div class="sec-head">
-        <span class="sec-num">01 // CYBORG_OPTIC_SCANNER</span>
-        <h2 class="sec-title">BIOMETRIC IDENTITY READOUT</h2>
-        <div class="sec-line"></div>
+    <!-- Hero Section -->
+    <section id="about" class="hero">
+      <div class="badge">NSUT Dwarka, New Delhi</div>
+      <h1 class="hero-title">Hi, I'm <span class="highlight">Akash Singh</span></h1>
+      <p class="hero-subtitle">
+        First-year <strong>Mechanical Engineering undergraduate</strong> at Netaji Subhas University of Technology (NSUT). Passionate about hands-on problem solving, 3D design in Blender, software exploration, and student initiatives.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="https://www.linkedin.com/in/akash-singh-bb94b0294" target="_blank" rel="noopener" class="btn btn-secondary">LinkedIn ↗</a>
+        <a href="https://github.com/akashsfw" target="_blank" rel="noopener" class="btn btn-secondary">GitHub ↗</a>
       </div>
+    </section>
 
-      <div class="scanner-grid">
-        <!-- Left: Animated Cyborg Reticle -->
-        <div class="cyber-card">
-          <span class="corner tl"></span><span class="corner tr"></span>
-          <span class="corner bl"></span><span class="corner br"></span>
+    <!-- Campus Experience & Affiliations -->
+    <section id="affiliations" class="section">
+      <h2 class="section-title">Campus & Societies</h2>
+      <p class="section-desc">Active roles and community involvement across NSUT.</p>
 
-          <div class="reticle-stage" id="reticle-box">
-            <div class="laser-bar"></div>
-
-            <!-- Rotating SVG Cybernetic Rings -->
-            <svg class="reticle-svg" viewBox="0 0 300 300">
-              <circle class="ring-cw" cx="150" cy="150" r="125" fill="none" stroke="var(--cyan)" stroke-width="1.5" stroke-dasharray="18 10 5 10" opacity="0.7"/>
-              <circle class="ring-ccw" cx="150" cy="150" r="98" fill="none" stroke="var(--yellow)" stroke-width="1.5" stroke-dasharray="40 20" opacity="0.6"/>
-              <circle class="ring-cw" cx="150" cy="150" r="72" fill="none" stroke="var(--pink)" stroke-width="1" stroke-dasharray="8 14" opacity="0.6"/>
-              <polygon points="150,45 245,150 150,255 55,150" fill="none" stroke="var(--cyan)" stroke-width="0.8" opacity="0.35"/>
-              <line x1="150" y1="10" x2="150" y2="55" stroke="var(--cyan)" stroke-width="1.5"/>
-              <line x1="150" y1="245" x2="150" y2="290" stroke="var(--cyan)" stroke-width="1.5"/>
-              <line x1="10" y1="150" x2="55" y2="150" stroke="var(--cyan)" stroke-width="1.5"/>
-              <line x1="245" y1="150" x2="290" y2="150" stroke="var(--cyan)" stroke-width="1.5"/>
-            </svg>
-
-            <div class="core-avatar">
-              <div class="avatar-code">AS</div>
-              <span class="avatar-status" id="scan-badge">LOCKED // VERIFIED</span>
-            </div>
-
-            <div class="reticle-hud-tl">
-              OPTIC_SENSOR: <span class="val">ACTIVE</span><br>
-              TARGET: <span class="val">AKASH_SINGH</span><br>
-              LOC: <span class="val">28.6091° N, 77.0350° E</span>
-            </div>
-            <div class="reticle-hud-br">
-              DEGREE: <span class="val">B.TECH MECH</span><br>
-              INSTITUTE: <span class="val">NSUT_DWARKA</span><br>
-              YEAR: <span class="val">1ST_YEAR</span>
-            </div>
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-header">
+            <h3>The Debugging Society (TDS)</h3>
+            <span class="card-tag">Tech Member</span>
           </div>
-
-          <!-- Interactive Biometric Node Tabs -->
-          <div class="node-tabs">
-            <button class="node-btn active" data-node="identity">[01_IDENTITY]</button>
-            <button class="node-btn" data-node="affiliations">[02_AFFILIATIONS]</button>
-            <button class="node-btn" data-node="venture">[03_VENTURE]</button>
-            <button class="node-btn" data-node="creative">[04_INTERESTS]</button>
-          </div>
+          <p>Active member at NSUT's technical society. Exploring coding culture, software fundamentals, and collaborative technical events.</p>
         </div>
 
-        <!-- Right: Cyborg Scan Dossier Output -->
-        <div class="cyber-card">
-          <span class="corner tl"></span><span class="corner tr"></span>
-          <span class="corner bl"></span><span class="corner br"></span>
-
-          <div class="dossier-top">
-            <span class="status-pill"><span class="pulse-dot"></span> BIOMETRIC STREAM ONLINE</span>
-            <span class="mono-dim" id="scan-clock">SYS_TIME: --:--:--</span>
+        <div class="card">
+          <div class="card-header">
+            <h3>Moksha — Cultural Fest</h3>
+            <span class="card-tag">Logistics Volunteer</span>
           </div>
+          <p>Handled on-ground event coordination and logistics during North India's flagship annual college cultural festival at NSUT.</p>
+        </div>
 
-          <h1 class="hero-name">AKASH <span>SINGH</span></h1>
-          <div class="hero-role">MECHANICAL ENGINEERING UNDERGRADUATE // NSUT DWARKA</div>
-
-          <!-- Dynamic Scan Readout Box -->
-          <div class="scan-readout-box" id="scan-box">
-            <div class="readout-tag" id="readout-tag">// NODE_01 : CORE BIOMETRIC DOSSIER</div>
-            <div class="readout-title" id="readout-title">1st-Year Undergrad Explorer & Builder</div>
-            <p class="readout-desc" id="readout-desc">
-              First-year Mechanical Engineering student at Netaji Subhas University of Technology (NSUT), Dwarka, New Delhi. Driven by hands-on experimentation across technology, 3D spatial design, student societies, and real-world campus execution.
-            </p>
-            <div class="spec-grid" id="readout-specs">
-              <div class="spec-cell">
-                <span class="spec-label">INSTITUTION</span>
-                <span class="spec-val">NSUT Dwarka, Delhi</span>
-              </div>
-              <div class="spec-cell">
-                <span class="spec-label">ACADEMIC TRACK</span>
-                <span class="spec-val">B.Tech Mechanical (1st Yr)</span>
-              </div>
-              <div class="spec-cell">
-                <span class="spec-label">SOCIETIES & OPS</span>
-                <span class="spec-val">TDS // NSS // Moksha</span>
-              </div>
-              <div class="spec-cell">
-                <span class="spec-label">EXPLORING</span>
-                <span class="spec-val">Blender 3D & Tech</span>
-              </div>
-            </div>
+        <div class="card">
+          <div class="card-header">
+            <h3>NSS Cell NSUT</h3>
+            <span class="card-tag">Social Outreach</span>
           </div>
-
-          <div class="cta-row">
-            <button class="btn-cyber" id="trigger-scan-btn">RUN BIOMETRIC SCAN</button>
-            <a href="#projects" class="btn-outline">OPEN SOUNDBLASTERS DECK</a>
-            <a href="https://www.linkedin.com/in/akash-singh-bb94b0294" target="_blank" rel="noopener" class="btn-outline">LINKEDIN //</a>
-            <a href="https://github.com/akashsfw" target="_blank" rel="noopener" class="btn-outline">GITHUB // @akashsfw</a>
-          </div>
+          <p>Contributing to community development drives, educational outreach, and campus social responsibility initiatives.</p>
         </div>
       </div>
     </section>
 
-    <!-- ==========================================
-         02 // TELEMETRY & CAMPUS AFFILIATIONS
-         ========================================== -->
-    <section id="telemetry">
-      <div class="sec-head">
-        <span class="sec-num">02 // NEURAL_TELEMETRY</span>
-        <h2 class="sec-title">CAPABILITY METRICS & AFFILIATIONS</h2>
-        <div class="sec-line"></div>
-      </div>
+    <!-- Featured Projects -->
+    <section id="projects" class="section">
+      <h2 class="section-title">Featured Project</h2>
+      <p class="section-desc">Practical builds and entrepreneurial initiatives.</p>
 
-      <div class="telemetry-grid">
-        <!-- Left: Animated Telemetry Progress Bars -->
-        <div class="cyber-card">
-          <span class="corner tl"></span><span class="corner tr"></span>
-          <span class="corner bl"></span><span class="corner br"></span>
-
-          <div class="card-header-row">
-            <span class="mono-cyan">// LIVEAPTITUDE_METRICS</span>
-            <button class="hud-btn" id="recalibrate-btn">RE-CALIBRATE TELEMETRY</button>
-          </div>
-
-          <div class="stat-item">
-            <div class="stat-top">
-              <span class="stat-name">Curiosity & Rapid Adaptability</span>
-              <span class="stat-pct">100% // MAX_DRIVE</span>
-            </div>
-            <div class="stat-track">
-              <div class="stat-fill" data-width="100%" style="width: 100%; background: var(--green);"></div>
-            </div>
-            <div class="stat-note">Always ready to dive into unfamiliar domains and learn through direct experience.</div>
-          </div>
-
-          <div class="stat-item">
-            <div class="stat-top">
-              <span class="stat-name">Cross-Domain Initiative & Exploration</span>
-              <span class="stat-pct">95% // ACTIVE</span>
-            </div>
-            <div class="stat-track">
-              <div class="stat-fill" data-width="95%" style="width: 95%; background: var(--cyan);"></div>
-            </div>
-            <div class="stat-note">Stepping into tech societies, social outreach, cultural fest logistics, and entrepreneurship.</div>
-          </div>
-
-          <div class="stat-item">
-            <div class="stat-top">
-              <span class="stat-name">Event Logistics & Ground Execution</span>
-              <span class="stat-pct">65% // FIELD_TESTED</span>
-            </div>
-            <div class="stat-track">
-              <div class="stat-fill" data-width="65%" style="width: 65%; background: var(--yellow);"></div>
-            </div>
-            <div class="stat-note">Coordinated on-ground operations as a Logistics Volunteer at Moksha (NSUT Cultural Fest).</div>
-          </div>
-
-          <div class="stat-item">
-            <div class="stat-top">
-              <span class="stat-name">Web & Tech Exploration</span>
-              <span class="stat-pct">30% // BUILDING_BASE</span>
-            </div>
-            <div class="stat-track">
-              <div class="stat-fill" data-width="30%" style="width: 30%; background: var(--cyan);"></div>
-            </div>
-            <div class="stat-note">Exploring software fundamentals, GitHub workflows, and technical problem-solving with TDS.</div>
-          </div>
-
-          <div class="stat-item">
-            <div class="stat-top">
-              <span class="stat-name">Blender 3D Modelling & Visual Design</span>
-              <span class="stat-pct">25% // EXPLORING</span>
-            </div>
-            <div class="stat-track">
-              <div class="stat-fill" data-width="25%" style="width: 25%; background: var(--pink);"></div>
-            </div>
-            <div class="stat-note">Learning 3D mesh workflows, lighting, materials, and spatial rendering inside Blender.</div>
-          </div>
+      <div class="featured-project">
+        <div class="project-header">
+          <span class="project-tag">EMC Startup Initiative • Class 12th</span>
+          <h3>Sound Blasters — Bamboo Sound Amplifier</h3>
         </div>
-
-        <!-- Right: Active NSUT Organizations & Hobbies -->
-        <div class="cyber-card">
-          <span class="corner tl"></span><span class="corner tr"></span>
-          <span class="corner bl"></span><span class="corner br"></span>
-
-          <div class="mono-cyan card-sub-heading">// NSUT_AFFILIATIONS_LOG</div>
-
-          <div class="org-list">
-            <div class="org-card">
-              <div class="org-top">
-                <span class="org-title">The Debugging Society (TDS)</span>
-                <span class="org-badge">TECH SOCIETY // NSUT</span>
-              </div>
-              <div class="org-desc">Member at NSUT's technical society, exploring coding culture, debugging challenges, and collaborative tech events.</div>
-            </div>
-
-            <div class="org-card">
-              <div class="org-top">
-                <span class="org-title">Moksha — NSUT Cultural Fest</span>
-                <span class="org-badge">LOGISTICS VOLUNTEER</span>
-              </div>
-              <div class="org-desc">Worked on ground logistics and coordination during North India's flagship annual cultural festival at NSUT.</div>
-            </div>
-
-            <div class="org-card">
-              <div class="org-top">
-                <span class="org-title">NSS Cell NSUT</span>
-                <span class="org-badge">COMMUNITY & OUTREACH</span>
-              </div>
-              <div class="org-desc">Active member contributing to social responsibility initiatives and student-driven community drives.</div>
-            </div>
-          </div>
-
-          <div class="hobby-strip">
-            <div class="hobby-label">// PERSONAL_SUBROUTINES & INTERESTS</div>
-            <div class="hobby-pills">
-              <div class="hobby-pill"><strong>[NOTES_CHRONICLES]</strong> Writing daily life stories & observations in Notes</div>
-              <div class="hobby-pill"><strong>[VISUAL_CULTURE]</strong> Cinema, Anime & Manga Enthusiast</div>
-              <div class="hobby-pill"><strong>[3D_LAB]</strong> Exploring Blender 3D & Design</div>
-            </div>
-          </div>
+        <p class="project-text">
+          An eco-friendly, zero-electricity passive acoustic amplifier handcrafted from natural bamboo resonance chambers. Boosts mobile audio naturally by directing sound waves through organic acoustic physics.
+        </p>
+        <div class="pill-group">
+          <span class="pill">Acoustic Physics</span>
+          <span class="pill">Eco-Friendly</span>
+          <span class="pill">0W Power Draw</span>
+          <span class="pill">EMC Initiative</span>
+        </div>
+        <div class="project-links">
+          <a href="https://akashsfw.github.io/Soundblasters/" target="_blank" rel="noopener" class="btn btn-primary">Live Demo ↗</a>
+          <a href="https://github.com/akashsfw/Soundblasters" target="_blank" rel="noopener" class="btn btn-secondary">Source Code</a>
         </div>
       </div>
     </section>
 
-    <!-- ==========================================
-         03 // LIVE EMBEDDED PROJECT HOLO-DECK
-         ========================================== -->
-    <section id="projects">
-      <div class="sec-head">
-        <span class="sec-num">03 // PROJECT_HOLO_DECK</span>
-        <h2 class="sec-title">DEPLOYED BUILDS & EXPANSION BAYS</h2>
-        <div class="sec-line"></div>
-      </div>
+    <!-- Creative Interests & Skills -->
+    <section id="interests" class="section">
+      <h2 class="section-title">Skills & Interests</h2>
+      <p class="section-desc">What I spend my time exploring and learning.</p>
 
-      <!-- Featured Project: Sound Blasters Live Embed + Interactive Simulator -->
-      <div class="cyber-card">
-        <span class="corner tl"></span><span class="corner tr"></span>
-        <span class="corner bl"></span><span class="corner br"></span>
-
-        <div class="project-showcase">
-          <!-- Left: Project Info -->
-          <div class="proj-meta">
-            <div>
-              <span class="proj-badge">SLOT_01 // LIVE DEPLOYMENT</span>
-              <h3 class="proj-title">Sound Blasters — Bamboo Sound Amplifier</h3>
-              <p class="proj-desc">
-                Entrepreneurship Mindset Curriculum (EMC) startup project built in Class 12th. Designed a sustainable, zero-electricity passive acoustic amplifier handcrafted from natural bamboo resonance chambers.
-              </p>
-
-              <div class="proj-specs">
-                <div class="proj-spec-row">
-                  <span class="k">VENTURE ORIGIN</span>
-                  <span class="v">EMC Startup Initiative (Class 12th)</span>
-                </div>
-                <div class="proj-spec-row">
-                  <span class="k">CORE PRINCIPLE</span>
-                  <span class="v">Natural Bamboo Acoustic Resonance</span>
-                </div>
-                <div class="proj-spec-row">
-                  <span class="k">POWER DRAW</span>
-                  <span class="v" style="color:var(--green);">0W (100% Passive Amplification)</span>
-                </div>
-                <div class="proj-spec-row">
-                  <span class="k">WEB DEPLOYMENT</span>
-                  <span class="v">akashsfw.github.io/Soundblasters</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="cta-row">
-              <a href="https://akashsfw.github.io/Soundblasters/" target="_blank" rel="noopener" class="btn-cyber">LAUNCH FULLSCREEN SITE ↗</a>
-              <a href="https://github.com/akashsfw/Soundblasters" target="_blank" rel="noopener" class="btn-outline">SOURCE CODE</a>
-            </div>
+      <div class="cards-grid">
+        <div class="card">
+          <div class="card-header">
+            <h3>Blender 3D & Design</h3>
+            <span class="card-tag">Creative</span>
           </div>
-
-          <!-- Right: Live Embedded Website + Interactive Acoustic Simulator -->
-          <div class="holo-viewport-wrap">
-            <div class="holo-bar">
-              <div class="holo-dots">
-                <span class="r"></span><span class="y"></span><span class="g"></span>
-              </div>
-              <div class="holo-url">HTTPS://AKASHSFW.GITHUB.IO/SOUNDBLASTERS/</div>
-              <div class="holo-actions">
-                <button class="mini-btn active" id="mode-web-btn">LIVE WEB EMBED</button>
-                <button class="mini-btn" id="mode-sim-btn">ACOUSTIC SIMULATOR</button>
-                <button class="mini-btn" id="size-mob-btn" title="Toggle Mobile Preview">MOB</button>
-                <button class="mini-btn" id="reload-iframe-btn" title="Reload Embedded Page">↻</button>
-              </div>
-            </div>
-
-            <div class="iframe-stage" id="iframe-stage">
-              <iframe
-                id="sb-iframe"
-                class="live-iframe"
-                src="https://akashsfw.github.io/Soundblasters/"
-                title="Sound Blasters - Bamboo Sound Amplifier Live Embed"
-                loading="lazy">
-              </iframe>
-
-              <!-- Interactive Bamboo Acoustic Wave Simulator Overlay -->
-              <div class="sim-overlay" id="sim-overlay">
-                <div class="sim-header">
-                  <div>
-                    <div class="mono-yellow">// BAMBOO ACOUSTIC RESONANCE CHAMBER SIMULATOR</div>
-                    <div class="sim-sub">Adjust acoustic frequency & bamboo chamber geometry to visualize passive sound amplification.</div>
-                  </div>
-                  <span class="proj-badge" id="gain-readout">GAIN: +11.4 dB</span>
-                </div>
-
-                <canvas id="wave-canvas"></canvas>
-
-                <div class="sim-controls">
-                  <div class="sim-slider-box">
-                    <label>INPUT FREQUENCY <span id="freq-val">440 Hz</span></label>
-                    <input type="range" id="freq-slider" min="120" max="1200" value="440" />
-                  </div>
-                  <div class="sim-slider-box">
-                    <label>BAMBOO CHAMBER LENGTH <span id="chamber-val">32 cm</span></label>
-                    <input type="range" id="chamber-slider" min="15" max="60" value="32" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <p>Exploring 3D modeling, mesh topology, lighting setups, and spatial rendering in Blender.</p>
         </div>
 
-        <!-- 3 Locked Expansion Project Slots for Future Builds -->
-        <div class="slots-grid">
-          <div class="locked-slot" data-slot="02">
-            <div class="slot-top">
-              <span>BAY_02 // STANDBY</span>
-              <span class="slot-lock-tag">[LOCKED_SLOT]</span>
-            </div>
-            <div class="slot-title">3D BLENDER ASSET / SCENE</div>
-            <div class="slot-sub">Reserved for upcoming Blender 3D spatial modelling & render showcase. Click to ping bay status.</div>
+        <div class="card">
+          <div class="card-header">
+            <h3>Notes App Chronicles</h3>
+            <span class="card-tag">Writing</span>
           </div>
+          <p>Capturing everyday experiences, life lessons, and raw observational thoughts into narrative stories.</p>
+        </div>
 
-          <div class="locked-slot" data-slot="03">
-            <div class="slot-top">
-              <span>BAY_03 // STANDBY</span>
-              <span class="slot-lock-tag">[LOCKED_SLOT]</span>
-            </div>
-            <div class="slot-title">TDS / TECH BUILD</div>
-            <div class="slot-sub">Reserved for upcoming software or engineering prototype. Click to ping bay status.</div>
+        <div class="card">
+          <div class="card-header">
+            <h3>Cinema & Anime</h3>
+            <span class="card-tag">Inspiration</span>
           </div>
-
-          <div class="locked-slot" data-slot="04">
-            <div class="slot-top">
-              <span>BAY_04 // STANDBY</span>
-              <span class="slot-lock-tag">[LOCKED_SLOT]</span>
-            </div>
-            <div class="slot-title">UNANNOUNCED EXPERIMENT</div>
-            <div class="slot-sub">Awaiting deployment telemetry. New experiments in progress at NSUT.</div>
-          </div>
+          <p>Enthusiast for world-building, cinematography, compelling visual storytelling, and manga.</p>
         </div>
       </div>
     </section>
 
-    <!-- ==========================================
-         04 // DIRECT NEURAL UPLINK (CONTACT)
-         ========================================== -->
-    <section id="comms">
-      <div class="sec-head">
-        <span class="sec-num">04 // DIRECT_UPLINK</span>
-        <h2 class="sec-title">INITIALIZE CONNECTION</h2>
-        <div class="sec-line"></div>
-      </div>
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+      <h2 class="section-title">Let's Connect</h2>
+      <p class="section-desc">Open for collaborations, society projects, Blender 3D builds, or just a good conversation.</p>
 
-      <div class="cyber-card">
-        <span class="corner tl"></span><span class="corner tr"></span>
-        <span class="corner bl"></span><span class="corner br"></span>
-
-        <div class="uplink-bar">
-          <div>
-            <div class="mono-yellow">// OPEN FOR COLLABORATIONS, PROJECTS & CONVERSATIONS</div>
-            <h3 class="uplink-title">CONNECT WITH AKASH SINGH</h3>
-            <p class="uplink-sub">
-              Whether it's campus societies, tech & Blender 3D collaborations, or discussing cinema, anime, and creative builds—reach out via LinkedIn or GitHub.
-            </p>
-          </div>
-
-          <div class="cta-row">
-            <a href="https://www.linkedin.com/in/akash-singh-bb94b0294" target="_blank" rel="noopener" class="btn-cyber">CONNECT ON LINKEDIN ↗</a>
-            <a href="https://github.com/akashsfw" target="_blank" rel="noopener" class="btn-outline">GITHUB // @akashsfw</a>
-            <a href="https://github.com/akashsfw/Soundblasters" target="_blank" rel="noopener" class="btn-outline">SOUNDBLASTERS REPO</a>
-          </div>
-        </div>
+      <div class="contact-links">
+        <a href="mailto:akashsingh.nsps26@gmail.com" class="btn btn-primary">Send Email ✉</a>
+        <a href="https://www.linkedin.com/in/akash-singh-bb94b0294" target="_blank" rel="noopener" class="btn btn-secondary">LinkedIn ↗</a>
+        <a href="https://github.com/akashsfw" target="_blank" rel="noopener" class="btn btn-secondary">GitHub ↗</a>
       </div>
     </section>
-
-    <footer>
-      <div>AKASH SINGH // NSUT DWARKA, NEW DELHI</div>
-      <div>CYBER_OPTIC HUD v5.0 // ALL SYSTEMS OPERATIONAL</div>
-    </footer>
 
   </main>
 
-  <!-- Main Script -->
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© <span id="year"></span> Akash Singh • NSUT Dwarka, New Delhi</p>
+  </footer>
+
+  <!-- Simple script for theme toggle & year -->
   <script src="script.js"></script>
 </body>
 </html>
