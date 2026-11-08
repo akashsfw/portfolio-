@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,15 +15,15 @@
   <!-- Navigation Bar -->
   <header class="navbar">
     <div class="nav-container">
-      <a href="#" class="logo">AS<span>.</span></a>
+      <a href="#" class="logo">Akash Singh</a>
       <nav class="nav-menu">
         <a href="#about">About</a>
-        <a href="#affiliations">Experience</a>
+        <a href="#societies">Societies</a>
+        <a href="#fests">Fests</a>
         <a href="#projects">Projects</a>
         <a href="#interests">Interests</a>
         <a href="#contact">Contact</a>
       </nav>
-      <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme" title="Toggle theme">🌙</button>
     </div>
   </header>
 
@@ -31,112 +31,180 @@
 
     <!-- Hero Section -->
     <section id="about" class="hero">
-      <div class="badge">NSUT Dwarka, New Delhi</div>
-      <h1 class="hero-title">Hi, I'm <span class="highlight">Akash Singh</span></h1>
+      
+      <!-- Interactive Hover Card for Age & Branch -->
+      <div class="hover-card-trigger" tabindex="0" role="region" aria-label="Quick profile details">
+        <div class="profile-chip">
+          <span class="status-indicator"></span>
+          <span class="chip-name">Akash Singh</span>
+          <span class="chip-sep">/</span>
+          <span class="chip-meta">NSUT Dwarka</span>
+          <span class="chip-hint">Hover for details ⓘ</span>
+        </div>
+
+        <!-- The Hover Card -->
+        <div class="hover-card">
+          <div class="hover-card-header">
+            <div class="hover-avatar">AS</div>
+            <div>
+              <div class="hover-title">Akash Singh</div>
+              <div class="hover-subtitle">Undergraduate Student</div>
+            </div>
+          </div>
+          <div class="hover-divider"></div>
+          <div class="hover-details">
+            <div class="hover-row">
+              <span class="hover-label">Age</span>
+              <span class="hover-value">18</span>
+            </div>
+            <div class="hover-row">
+              <span class="hover-label">Branch</span>
+              <span class="hover-value">Mechanical Engineering</span>
+            </div>
+            <div class="hover-row">
+              <span class="hover-label">College</span>
+              <span class="hover-value">NSUT Dwarka, New Delhi</span>
+            </div>
+            <div class="hover-row">
+              <span class="hover-label">Year</span>
+              <span class="hover-value">1st Year (B.Tech)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h1 class="hero-title">Engineering student with an eye for design & practical builds.</h1>
+      
       <p class="hero-subtitle">
-        First-year <strong>Mechanical Engineering undergraduate</strong> at Netaji Subhas University of Technology (NSUT). Passionate about hands-on problem solving, 3D design in Blender, software exploration, and student initiatives.
+        First-year <strong>Mechanical Engineering undergraduate</strong> at Netaji Subhas University of Technology (NSUT). Exploring hands-on problem solving, 3D modeling in Blender, software fundamentals, and active campus initiatives.
       </p>
+
       <div class="hero-cta">
         <a href="#projects" class="btn btn-primary">View Projects</a>
         <a href="https://www.linkedin.com/in/akash-singh-bb94b0294" target="_blank" rel="noopener" class="btn btn-secondary">LinkedIn ↗</a>
         <a href="https://github.com/akashsfw" target="_blank" rel="noopener" class="btn btn-secondary">GitHub ↗</a>
+        <a href="mailto:akashsingh.nsps26@gmail.com" class="btn btn-secondary">Email ✉</a>
       </div>
     </section>
 
-    <!-- Campus Experience & Affiliations -->
-    <section id="affiliations" class="section">
-      <h2 class="section-title">Campus & Societies</h2>
-      <p class="section-desc">Active roles and community involvement across NSUT.</p>
+    <!-- Campus Societies -->
+    <section id="societies" class="section">
+      <div class="section-header">
+        <h2 class="section-title">Campus Societies</h2>
+        <p class="section-desc">Technical and social initiative teams at NSUT.</p>
+      </div>
 
       <div class="cards-grid">
         <div class="card">
           <div class="card-header">
             <h3>The Debugging Society (TDS)</h3>
-            <span class="card-tag">Tech Member</span>
+            <span class="badge">Tech Member</span>
           </div>
           <p>Active member at NSUT's technical society. Exploring coding culture, software fundamentals, and collaborative technical events.</p>
         </div>
 
         <div class="card">
           <div class="card-header">
-            <h3>Moksha — Cultural Fest</h3>
-            <span class="card-tag">Logistics Volunteer</span>
+            <h3>NSS Cell NSUT</h3>
+            <div class="badge-group">
+              <span class="badge">Tech Dept</span>
+              <span class="badge">Design Dept</span>
+            </div>
           </div>
-          <p>Handled on-ground event coordination and logistics during North India's flagship annual college cultural festival at NSUT.</p>
+          <p>Active across both the Technical and Design departments — contributing to digital coordination, web assets, and designing creative visual media for community drives and social outreach.</p>
         </div>
+      </div>
+    </section>
 
+    <!-- College Festivals (Separate Section) -->
+    <section id="fests" class="section">
+      <div class="section-header">
+        <h2 class="section-title">College Festivals</h2>
+        <p class="section-desc">Festival operations, crowd management, and on-ground coordination.</p>
+      </div>
+
+      <div class="cards-grid single-col">
         <div class="card">
           <div class="card-header">
-            <h3>NSS Cell NSUT</h3>
-            <span class="card-tag">Social Outreach</span>
+            <div>
+              <h3>Moksha — Annual Cultural Fest</h3>
+              <span class="card-sub">Netaji Subhas University of Technology</span>
+            </div>
+            <span class="badge">Logistics Volunteer</span>
           </div>
-          <p>Contributing to community development drives, educational outreach, and campus social responsibility initiatives.</p>
+          <p>Handled on-ground event coordination, venue preparations, and logistics operations during North India's flagship annual college cultural festival at NSUT.</p>
         </div>
       </div>
     </section>
 
     <!-- Featured Projects -->
     <section id="projects" class="section">
-      <h2 class="section-title">Featured Project</h2>
-      <p class="section-desc">Practical builds and entrepreneurial initiatives.</p>
+      <div class="section-header">
+        <h2 class="section-title">Featured Project</h2>
+        <p class="section-desc">Practical builds and entrepreneurial initiatives.</p>
+      </div>
 
-      <div class="featured-project">
+      <div class="project-card">
         <div class="project-header">
-          <span class="project-tag">EMC Startup Initiative • Class 12th</span>
+          <span class="project-category">EMC Startup Initiative • Class 12th</span>
           <h3>Sound Blasters — Bamboo Sound Amplifier</h3>
         </div>
         <p class="project-text">
-          An eco-friendly, zero-electricity passive acoustic amplifier handcrafted from natural bamboo resonance chambers. Boosts mobile audio naturally by directing sound waves through organic acoustic physics.
+          An eco-friendly, zero-electricity passive acoustic amplifier handcrafted from natural bamboo resonance chambers. Naturally amplifies smartphone audio by directing sound waves through organic acoustic physics.
         </p>
         <div class="pill-group">
           <span class="pill">Acoustic Physics</span>
-          <span class="pill">Eco-Friendly</span>
-          <span class="pill">0W Power Draw</span>
+          <span class="pill">Sustainable Product</span>
+          <span class="pill">Zero Electricity</span>
           <span class="pill">EMC Initiative</span>
         </div>
         <div class="project-links">
           <a href="https://akashsfw.github.io/Soundblasters/" target="_blank" rel="noopener" class="btn btn-primary">Live Demo ↗</a>
-          <a href="https://github.com/akashsfw/Soundblasters" target="_blank" rel="noopener" class="btn btn-secondary">Source Code</a>
+          <a href="https://github.com/akashsfw/Soundblasters" target="_blank" rel="noopener" class="btn btn-secondary">Source Code ↗</a>
         </div>
       </div>
     </section>
 
     <!-- Creative Interests & Skills -->
     <section id="interests" class="section">
-      <h2 class="section-title">Skills & Interests</h2>
-      <p class="section-desc">What I spend my time exploring and learning.</p>
+      <div class="section-header">
+        <h2 class="section-title">Interests & Pursuits</h2>
+        <p class="section-desc">Creative and technical areas I spend time exploring.</p>
+      </div>
 
       <div class="cards-grid">
         <div class="card">
           <div class="card-header">
             <h3>Blender 3D & Design</h3>
-            <span class="card-tag">Creative</span>
+            <span class="badge">3D & CGI</span>
           </div>
-          <p>Exploring 3D modeling, mesh topology, lighting setups, and spatial rendering in Blender.</p>
+          <p>Exploring 3D modeling, mesh topology, surface texturing, lighting environments, and spatial scene composition in Blender.</p>
         </div>
 
         <div class="card">
           <div class="card-header">
             <h3>Notes App Chronicles</h3>
-            <span class="card-tag">Writing</span>
+            <span class="badge">Writing</span>
           </div>
-          <p>Capturing everyday experiences, life lessons, and raw observational thoughts into narrative stories.</p>
+          <p>Documenting everyday observations, reflections, and lessons into short narratives and introspective essays.</p>
         </div>
 
         <div class="card">
           <div class="card-header">
-            <h3>Cinema & Anime</h3>
-            <span class="card-tag">Inspiration</span>
+            <h3>Cinema & Visual Storytelling</h3>
+            <span class="badge">Inspiration</span>
           </div>
-          <p>Enthusiast for world-building, cinematography, compelling visual storytelling, and manga.</p>
+          <p>Studying cinematography, scene pacing, anime world-building, and artistic direction in contemporary film.</p>
         </div>
       </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="section contact-section">
-      <h2 class="section-title">Let's Connect</h2>
-      <p class="section-desc">Open for collaborations, society projects, Blender 3D builds, or just a good conversation.</p>
+      <div class="section-header">
+        <h2 class="section-title">Get in Touch</h2>
+        <p class="section-desc">Always open to discuss engineering projects, society collaborations, Blender 3D, or simply connect.</p>
+      </div>
 
       <div class="contact-links">
         <a href="mailto:akashsingh.nsps26@gmail.com" class="btn btn-primary">Send Email ✉</a>
@@ -147,12 +215,12 @@
 
   </main>
 
-  <!-- Footer -->
+  <!-- Footer (No JS required) -->
   <footer class="footer">
-    <p>© <span id="year"></span> Akash Singh • NSUT Dwarka, New Delhi</p>
+    <div class="footer-container">
+      <p>© 2026 Akash Singh • Netaji Subhas University of Technology, New Delhi</p>
+    </div>
   </footer>
 
-  <!-- Simple script for theme toggle & year -->
-  <script src="script.js"></script>
 </body>
 </html>
